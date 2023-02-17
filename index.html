@@ -2,33 +2,43 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/app.css" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 
 <body>
-    <script>
-        const { createApp } = Vue
-        console.log(Vue)
-        
+    <div class="container">
+        <div id="app">
+            <h1 :class="[className]">{{ message }}</h1>
+            <p>{{ text }}</p>
 
-        const option = {
-            data() {
-                return {
-                    message: 'Hello Vue!',
-                    text: 'Benvenuti in questo framework!',
-                }
-            },
-        }
 
-        const app = createApp(option)
-        console.log(app)
+            <div>
+                <input type="text" placeholder="Testo" v-model="text" />
+            </div>
+        </div>
 
-        app.mount('#app')
-    </script>
+        <script>
+            const { createApp } = Vue
+            console.log(Vue)
+            const option = {
+                data() {
+                    return {
+                        message: "Vue-test",
+                        text: "Inserisci un testo",
+                        className: "bg-color text-white",
+                    }
+                },
+            }
+            const app = createApp(option)
+            app.mount("#app")
+        </script>
+    </div>
+
 </body>
 
 </html>

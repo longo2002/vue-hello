@@ -1,0 +1,19 @@
+.bg-color {
+	background-color: rgb(162, 255, 179);
+}
+
+.text-white {
+	color: white;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1200px;
+    text-align: center;
+}
+
+.container * {
+    border-radius: 15px;
+    padding: 5px;
+    font-family: sans-serif;
+}
